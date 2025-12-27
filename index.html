@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSIS SMP Insan Terpadu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+  <div class="loader-wrap">
+    <div class="glow"></div>
+    <img class="logo-spin"
+      src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_OSIS.png">
+    <h3>OSIS SMP Insan Terpadu</h3>
+    <p>Preparing Excellence...</p>
+  </div>
+</div>
+
+<audio id="loadSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-start-222.wav"></audio>
+
+<header class="page">
+  <h1>OSIS SMP <span>Insan Terpadu</span></h1>
+  <p>Satu Aksi, Banyak Prestasi</p>
+</header>
+
+<section class="page">
+  <h2>Berita OSIS</h2>
+
+  <div id="newsForm">
+    <input id="title" placeholder="Judul berita">
+    <textarea id="content" placeholder="Isi berita"></textarea>
+    <button class="add" onclick="saveNews()">Simpan</button>
+  </div>
+
+  <div id="newsList"></div>
+</section>
+
+<div class="admin-btn" onclick="login()">Admin</div>
+<div class="admin-btn logout-btn" id="logoutBtn" onclick="logout()">Logout</div>
+
+<footer>© 2026 OSIS SMP Insan Terpadu</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

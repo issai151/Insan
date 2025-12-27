@@ -1,0 +1,106 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#0b1020;color:#fff}
+
+/* === LOADING WITH OSIS LOGO BACKGROUND === */
+#loading{
+ position:fixed;inset:0;z-index:9999;
+ display:flex;justify-content:center;align-items:center;
+ background:
+  linear-gradient(rgba(5,8,20,.85),rgba(5,8,20,.85)),
+  url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_OSIS.png");
+ background-size:380px;
+ background-repeat:no-repeat;
+ background-position:center;
+}
+#loading::before{
+ content:"";position:absolute;inset:0;
+ backdrop-filter:blur(6px);
+}
+#loading.hide{
+ opacity:0;transform:scale(1.1);
+ transition:.6s ease;
+ pointer-events:none;
+}
+
+/* LOADER */
+.loader-wrap{text-align:center;z-index:2}
+.logo-spin{
+ width:120px;
+ animation:spin3d 3s infinite ease-in-out,
+          pulse 2s infinite;
+}
+.glow{
+ position:absolute;top:50%;left:50%;
+ transform:translate(-50%,-50%);
+ width:180px;height:180px;
+ background:rgba(0,212,255,.45);
+ filter:blur(45px);
+ border-radius:50%;
+ animation:glowPulse 2.5s infinite;
+}
+.loader-wrap h3{margin-top:20px;letter-spacing:2px}
+.loader-wrap p{opacity:.6;font-size:14px}
+
+/* PAGE ENTER */
+.page{
+ opacity:0;
+ transform:translateY(30px);
+ animation:pageEnter 1.2s ease forwards;
+ animation-delay:.2s;
+}
+
+/* HEADER */
+header{text-align:center;padding:60px 20px}
+header span{color:#00d4ff}
+
+/* SECTION */
+section{padding:40px 20px;max-width:900px;margin:auto}
+
+/* NEWS */
+.news{
+ background:#111735;padding:20px;
+ border-radius:12px;margin-bottom:15px
+}
+
+/* FORM */
+#newsForm{display:none;margin-bottom:20px}
+input,textarea{
+ width:100%;padding:10px;margin-bottom:10px;
+ border-radius:8px;border:none
+}
+button{padding:8px 14px;border:none;border-radius:6px;cursor:pointer}
+.add{background:#00d4ff}
+.edit{background:#ffaa00}
+.del{background:#b00020;color:#fff}
+
+/* ADMIN BUTTON */
+.admin-btn{
+ position:fixed;right:20px;bottom:20px;
+ background:#00d4ff;color:#000;
+ padding:12px 18px;border-radius:30px;
+ cursor:pointer;font-weight:bold
+}
+.logout-btn{
+ bottom:70px;background:#b00020;color:#fff;display:none
+}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;opacity:.6}
+
+/* ANIMATIONS */
+@keyframes spin3d{
+ 0%{transform:rotateY(0)}
+ 50%{transform:rotateY(180deg)}
+ 100%{transform:rotateY(360deg)}
+}
+@keyframes pulse{
+ 0%,100%{transform:scale(1)}
+ 50%{transform:scale(1.08)}
+}
+@keyframes glowPulse{
+ 0%,100%{opacity:.4}
+ 50%{opacity:.85}
+}
+@keyframes pageEnter{
+ to{opacity:1;transform:translateY(0)}
+}
