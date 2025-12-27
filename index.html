@@ -10,36 +10,78 @@
 
 <!-- LOADING -->
 <div id="loading">
-  <div class="loader-wrap">
-    <div class="glow"></div>
-    <img class="logo-spin"
-      src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_OSIS.png">
+  <div class="loader">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_OSIS.png">
     <h3>OSIS SMP Insan Terpadu</h3>
-    <p>Preparing Excellence...</p>
   </div>
 </div>
 
-<audio id="loadSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-start-222.wav"></audio>
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">OSIS IT</div>
+  <ul>
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#struktur">Struktur</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+    <li><a href="#berita">Berita</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
 
 <header class="page">
   <h1>OSIS SMP <span>Insan Terpadu</span></h1>
   <p>Satu Aksi, Banyak Prestasi</p>
 </header>
 
-<section class="page">
-  <h2>Berita OSIS</h2>
+<section id="profil" class="page glass">
+<h2>Profil OSIS</h2>
+<p>
+OSIS SMP Insan Terpadu adalah organisasi siswa yang berperan
+dalam pengembangan karakter, kepemimpinan, dan prestasi.
+</p>
+</section>
 
-  <div id="newsForm">
-    <input id="title" placeholder="Judul berita">
-    <textarea id="content" placeholder="Isi berita"></textarea>
-    <button class="add" onclick="saveNews()">Simpan</button>
-  </div>
+<section id="struktur" class="page">
+<h2>Struktur Organisasi</h2>
+<div class="grid">
+  <div class="card">👑 Radhika Fachry Pratama</div>
+  <div class="card">⭐ Muhammad Denendra Kenzi</div>
+  <div class="card">✍️ Safiera Putri Pameswari</div>
+  <div class="card">📱 Ilyas Brilliant Al-Fawwaz</div>
+  <div class="card">📚 Sie Kreatif</div>
+</div>
+</section>
 
-  <div id="newsList"></div>
+<section id="galeri" class="page glass">
+<h2>Galeri Kegiatan</h2>
+<div class="gallery">
+  <img src="https://files.catbox.moe/drx83s.jpg">
+  <img src="https://files.catbox.moe/ll0khl.jpg">
+  <img src="https://files.catbox.moe/laikkr.jpg">
+</div>
+</section>
+
+<section id="berita" class="page">
+<h2>Berita OSIS</h2>
+
+<div id="newsForm">
+  <input id="title" placeholder="Judul berita">
+  <textarea id="content" placeholder="Isi berita"></textarea>
+  <button onclick="saveNews()">Simpan</button>
+</div>
+
+<div id="newsList"></div>
+</section>
+
+<section id="kontak" class="page glass">
+<h2>Kontak</h2>
+<p>📍 SMP Insan Terpadu</p>
+<p>📧 osis.insanterpadu@gmail.com</p>
+<p>📱 Tiktok: @oster_terampil.2010</p>
 </section>
 
 <div class="admin-btn" onclick="login()">Admin</div>
-<div class="admin-btn logout-btn" id="logoutBtn" onclick="logout()">Logout</div>
+<div class="admin-btn logout" id="logoutBtn" onclick="logout()">Logout</div>
 
 <footer>© 2026 OSIS SMP Insan Terpadu</footer>
 
